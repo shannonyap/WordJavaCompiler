@@ -1,13 +1,17 @@
 package hello;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 
+@CrossOrigin(origins = "https://sunny-bean.herokuapp.com/", maxAge = 3600)
 @RestController
 public class WordCoder {
-    @CrossOrigin(origins = "https://sunny-bean.herokuapp.com/")
     @RequestMapping(
             value = "/compile",
             method = RequestMethod.POST,
@@ -33,4 +37,5 @@ public class WordCoder {
         return codeChunk[0];
     }
 }
+
 
