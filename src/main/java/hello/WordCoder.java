@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 
 @RestController
 public class WordCoder {
+    @CrossOrigin(origins = "http://localhost:8080")
     @RequestMapping(
             value = "/compile",
             method = RequestMethod.POST,
