@@ -1,0 +1,24 @@
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+</head>
+<header>
+  <title>Wingdings Java Compiler</title>
+</header>
+<body>
+  <h1 id="title">Welcome to the Wingdings Java Compiler!</h1>
+  <textarea cols="50" rows="10" class="textbox" id="wingdings">
+    public class CodeGenTest {
+      public static void main(String[] args) {
+        System.out.println("Hello World, from a generated program!");
+      }
+    }
+  </textarea>
+  <div id="wrapper">
+    <button type="button" onclick="compile()">Compile!</button>
+  </div>
+  <textarea cols="50" rows="10" class="textbox" id="compiledCode">
+  </textarea>
+  <script src="index.js"></script>
+</body>
+</html>
